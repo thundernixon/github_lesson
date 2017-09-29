@@ -28,12 +28,42 @@ a {
 .homepage p {
     color: red;
     font-weight: bold;
-    transform-origin: left bottom;
     transform: skew(-50deg);
+    padding: 0.5em;
 }
 .homepage p, .homepage a {
     text-shadow: 0 0  .25em white;
 }
+
+.home {
+    text-decoration: none;
+    font-size: 2rem;
+    padding: .5em;
+}
+.home:hover {
+    animation: spin .5s forwards ease;
+}
+
+.hoverspin {
+    transition: all .35s ease;
+    transform-origin: center;
+    display: inline-block;
+    transform: rotate(0deg) skew(-50deg);
+}
+
+.hoverspin:hover {
+    animation: spin .5s forwards ease;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) skew(-50deg);
+    }
+    100% {
+        transform: rotate(720deg) skew(-50deg);
+    }
+}
+
 
 a:hover {
     color: rgb(0,0,0);
@@ -63,9 +93,4 @@ a:hover {
     100% {
         transform: translate(.03em,00em) rotate(5deg);
     }
-}
-
-.home {
-    text-decoration: none;
-    font-size: 2rem;
 }
